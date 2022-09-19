@@ -1,3 +1,8 @@
+#!/usr/bin/python3
+
+""" This is the module doc """
+
+
 class Rectangle:
     """Initializing rectagle"""
     def __init__(self, width=0, height=0):
