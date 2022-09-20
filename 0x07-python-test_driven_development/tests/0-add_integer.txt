@@ -1,0 +1,33 @@
+This is the "0-add_integer" module
+===================================
+
+Import function:
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Add two postitve numbers:
+	>>> add_integer(2, 4)
+	6
+
+Adding a positive and negative number:
+	>>> add_integer(50, -5)
+	45
+
+Adding int with float:
+	>>> add_integer(2.1, 50)
+	52
+
+Addinng int with string:
+	>>> add_integer(5, "Program")
+	Traceback (most recent call last):
+		...
+	TypeError: b must be an integer
+
+Adding int with a letter:
+	>>> add_integer(5, l)
+	Traceback (most recent call last):
+                ...
+        NameError: name 'l' is not defined
+
+Adding two float:
+	add_integer('4.4', '5.5')
+	9
