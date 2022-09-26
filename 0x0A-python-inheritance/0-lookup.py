@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-
-""" Function returs available attributes and methods """
-
-
 def lookup(obj):
+    """ This function returns available attributes and methods """
     return (dir(obj))
