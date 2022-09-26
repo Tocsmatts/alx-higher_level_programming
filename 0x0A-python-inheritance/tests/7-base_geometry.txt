@@ -2,14 +2,16 @@ This is the "7-base_geometry" module
 ====================================
 
 Imort function:
-	>>> bg = __import__(7-base_geometry).BaseGeometry
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 Passing a positive value:
+	>>> bg = BaseGeometry()
 	>>> bg.integer_validator("name", 5)
 
 
 Passing dict to method
+	>>> bg = BaseGeometry()
 	>>> bg.integer_validator("age", {6, 7})
 	Traceback (most recent call last):
 		...
@@ -17,6 +19,7 @@ Passing dict to method
 
 
 Passing None to method
+	>>> bg = BaseGeometry()
 	>>> bg.integer_validator("toms", None)
 	Traceback (most recent call last):
 		...
@@ -24,6 +27,7 @@ Passing None to method
 
 
 Passing tuple to method
+	>>> bg = BaseGeometry()
 	>>> bg.integer_validator("agree", (6,))
 	Traceback (most recent call last):
 		...
@@ -31,6 +35,7 @@ Passing tuple to method
 
 
 Pass a zero value
+	>>> bg = BaseGeometry()
 	>>> bg.integer_validator("name", 0)
 	Traceback (most recent call last):
 		...
@@ -38,6 +43,7 @@ Pass a zero value
 
 
 Pass a negative value
+	>>> bg = BaseGeometry()
 	>>> bg.integer_validator("name", -5)
 	Traceback (most recent call last):
 		...
@@ -46,7 +52,8 @@ Pass a negative value
 
 
 Trying to pass a boolean value
+	>>> bg = BaseGeometry()
 	>>> bg.integer_validator("name", False)
 	Traceback (most recent call last):
 		...
-	TypeError: name must be an integer
+	ValueError: name must be greater than 0
