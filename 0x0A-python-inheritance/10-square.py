@@ -4,7 +4,9 @@
 
 
 class Rectangle:
+
     """ class created """
+
 
     def __init__(self, width, height):
         self.integer_validator("width", width)
@@ -29,6 +31,10 @@ class Rectangle:
 
 
 class Square(Rectangle):
+
+    """THis is a class """
+
+
     def __init__(self, size):
         self.integer_validator("size", size)
         self.__size = size
