@@ -76,11 +76,12 @@ class Rectangle(Base):
 
     def display(self):
         """ DIsplay a rectangle using # """
-        ht = self.height
-        while(ht > 0):
-            print("#" * self.width, end='')
-            print()
-            ht -= 1
+        rec  = self.y * "\n"
+        for a in range(self.height):
+            rec += (" " * self.x)
+            rec += ("#" * self.width) + "\n"
+
+        print(rec, end='')
 
     def __str__(self):
         """ string """
