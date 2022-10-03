@@ -81,3 +81,12 @@ class Rectangle(Base):
             print("#" * self.width, end='')
             print()
             ht -= 1
+
+    def __str__(self):
+        """ string """
+        rec = "[Rectangle]"
+        rec_id = " ({}) ".format(self.id)
+        rec_xy = "{}/{} - ".format(self.x, self.y)
+        rec_wh = "{}/{}".format(self.width, self.height)
+
+        return rec + rec_id + rec_xy + rec_wh
